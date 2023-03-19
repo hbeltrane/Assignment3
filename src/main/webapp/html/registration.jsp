@@ -9,7 +9,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 	<link href="/css/styles.css" rel="stylesheet" type="text/css">
 	<script defer src="/js/script.js"></script>	
-	<title>Assignment 3</title>
+	<title>Assignment 3 - Register</title>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
 			<!-- USER NAME -->
 			<div class="row g-3 align-items-center">
 				<div class="col-auto">
-				<label for="user-name" class="col-form-label">User Name</label>
+				<label for="user-name" class="col-form-label">Username</label>
 				</div>
 				<div class="col-auto">
 				<input type="text" id="user-name" class="form-control" name="user-name" aria-describedby="userNameHelpInline">
@@ -179,6 +179,21 @@
 		</div>
 		
 	</main>
+	<footer class="mt-auto text-white-50">
+    <nav class="navbar sticky-bottom bg-dark">
+			<div class="container">
+				<div class="row">
+					<h5 class="col-6">
+						<a class="nav-link text-white" href="/registration">Registration</a>
+					</h5>
+					<h5 class="col-6 col-lg-2 offset-lg-1 mb-3">
+						<a class="nav-link text-white" href="/search">Search</a>
+					</h5>
+					</li>
+				</div>
+			</div>
+		</nav>
+  </footer>
 	
 </body>
 </html>
