@@ -1,109 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<link href="/css/styles.css" rel="stylesheet" type="text/css">
+	<script defer src="/js/script.js"></script>	
 	<title>Assignment 3</title>
-	<link href="../css/styles.css" rel="stylesheet" type="text/css">
-	<script defer src="../js/signup.js"></script>
 </head>
 
 <body>
-								<form id="sign-up" action="index.html" method="POST">
-									<div class="row">
-										<div class="col-md-6 mb-4">
-											<div class="form-outline">
-												<label class="form-label" for="first-name">First Name</label>
-												<br>
-												<input type="text" id="first-name" name="first-name"
-													class="form-control form-control-lg" />
-											</div>
-										</div>
-										<div class="col-md-6 mb-4">
-											<div class="form-outline">
-												<label class="form-label" for="last-name">Last Name</label>
-												<br>
-												<input type="text" id="last-name" name="last-name"
-													class="form-control form-control-lg" />
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-6 mb-4">
-											<label for="nationality" class="form-label select-label">Nationality</label>
-											<br>
-											<select class="select form-control-lg" id="nationality" name="nationality">
-												
-											</select>
-										</div>
-										<div class="col-md-3 mb-4">
-											<div class="form-outline datepicker w-100">
-												<label for="date-of-birth" class="form-label">Date of birth</label>
-												<br>
-												<input type="date" class="form-control form-control-lg"
-													id="date-of-birth" name="date-of-birth" />
-											</div>
-										</div>
-										<div class="col-md-3 mb-4">
-											<label for="gender" class="form-label select-label">Gender</label>
-											<br>
-											<select class="select form-control-lg" id="gender" name="gender">
-												<option value="F">Female</option>
-												<option value="M">Male</option>
-												<option value="O">Other</option>
-											</select>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-6 mb-4">
-											<div class="form-outline">
-												<label class="form-label" for="email">Email</label>
-												<br>
-												<input type="email" id="email" name="email"
-													class="form-control form-control-lg" />
-											</div>
-										</div>
-										<div class="col-md-6 mb-4">
-											<div class="form-outline">
-												<label class="form-label" for="phone-number">Phone Number</label>
-												<br>
-												<div class="input-group">
-													<span class="input-group-text" id="inputGroupPrepend">+1</span>
-													<input type="tel" class="form-control form-control-lg"
-														id="phone-number" name="phone-number"
-														aria-describedby="inputGroupPrepend">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-6 mb-4">
-											<div class="form-outline">
-												<label class="form-label" for="password">Password</label>
-												<br>
-												<input type="password" id="password" name="password"
-													class="form-control form-control-lg" />
-											</div>
-										</div>
-										<div class="col-md-6 mb-4">
-											<div class="form-outline">
-												<label class="form-label" for="confirm-password">Confirm
-													Password</label>
-												<br>
-												<input type="password" id="confirm-password"
-													class="form-control form-control-lg" />
-											</div>
-										</div>
-									</div>
-									<br>
-									<div class="row">
-										<div class="col-md-12 mb-4 text-center">
-											<input class="btn btn-primary btn-lg" type="submit"
-												value="Create account" />
-											<!--<input class="btn btn-secondary btn-lg" type="button" onclick="window.location.href='index.html';" value="Cancel" />-->
-											<input class="btn btn-secondary btn-lg" type="button" onclick="test()" value="Cancel" />
-										</div>
-									</div>
-								</form>
-</body>
 
+	<main class="container">
+
+		<h1>Registration Form</h1>
+		<!-- REGISTRATION FORM -->
+		<div class="card">
+		<form class="card-body" id="register" action="RegistrationController" method="POST">
+			<!-- STUDENT ID -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="student-id" class="col-form-label">Student ID</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="student-id" class="form-control" name="student-id" aria-describedby="studentIdHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="studentIdHelpInline" class="form-text" hidden>
+					Only numbers are allowed.
+				</span>
+				</div>
+			</div>
+					
+			<!-- FULL NAME -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="full-name" class="col-form-label">Full Name</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="full-name" class="form-control" name="full-name" aria-describedby="fullNameHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="fullNameHelpInline" class="form-text" hidden>
+					Cannot be empty.
+				</span>
+				</div>
+			</div>
+			
+			<!-- USER NAME -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="user-name" class="col-form-label">User Name</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="user-name" class="form-control" name="user-name" aria-describedby="userNameHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="userNameHelpInline" class="form-text" hidden>
+					Cannot be empty.
+				</span>
+				</div>
+			</div>
+		
+			<!-- PASSWORD -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="password" class="col-form-label">Password</label>
+				</div>
+				<div class="col-auto">
+				<input type="password" id="password" class="form-control" name="password" aria-describedby="passwordHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="passwordHelpInline" class="form-text" hidden>
+					Must be at least 8 characters long.
+				</span>
+				</div>
+			</div>
+			
+			<!-- EMAIL -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="email" class="col-form-label">Email</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="email" class="form-control" name="email" aria-describedby="emailHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="emailHelpInline" class="form-text" hidden>
+					Cannot be empty.
+				</span>
+				</div>
+			</div>
+				
+			<!-- ADDRESS -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="address" class="col-form-label">Address</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="address" class="form-control" name="address" aria-describedby="addressHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="addressHelpInline" class="form-text" hidden>
+					Cannot be empty.
+				</span>
+				</div>
+			</div>
+	
+			<!-- AGE -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="age" class="col-form-label">Age</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="age" class="form-control" name="age" aria-describedby="ageHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="ageHelpInline" class="form-text" hidden>
+					Cannot be empty.
+				</span>
+				</div>
+			</div>
+	
+			<!-- QUALIFICATION -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="qualification" class="col-form-label">Qualification</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="qualification" class="form-control" name="qualification" aria-describedby="qualificationHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="qualificationHelpInline" class="form-text" hidden>
+					Cannot be empty.
+				</span>
+				</div>
+			</div>
+	
+			<!-- PERCENTAGE -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="percentage" class="col-form-label">Percentage</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="percentage" class="form-control" name="percentage" aria-describedby="percentageHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="percentageHelpInline" class="form-text" hidden>
+					Only numbers are allowed.
+				</span>
+				</div>
+			</div>
+	
+			<!-- YEAR PASSED -->
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+				<label for="year-passed" class="col-form-label">Year Passed</label>
+				</div>
+				<div class="col-auto">
+				<input type="text" id="year-passed" class="form-control" name="year-passed" aria-describedby="yearPassedHelpInline">
+				</div>
+				<div class="col-auto">
+				<span id="yearPassedHelpInline" class="form-text" hidden>
+					Only numbers are allowed.
+				</span>
+				</div>
+			</div><br>
+			<!-- SUBMIT -->
+			<div class="row align-items-cente">
+				<div class="col-auto">
+					<input class="btn btn-primary btn-lg" type="submit"	value="Register" />
+				</div>
+			</div>
+		</form>
+		</div>
+		
+	</main>
+	
+</body>
 </html>
