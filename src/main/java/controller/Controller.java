@@ -16,14 +16,14 @@ import repository.StudentDAO;
 /**
  * Servlet implementation class RegistrationController
  */
-@WebServlet("/RegistrationController")
-public class RegistrationController extends HttpServlet {
+@WebServlet("/Controller")
+public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegistrationController() {
+    public Controller() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,7 +35,7 @@ public class RegistrationController extends HttpServlet {
 		// TODO Auto-generated method stub
 		int id = Integer.parseInt(request.getParameter("student-id"));
 		StudentDAO newStudent = new StudentDAO();
-		newStudent.search(id);
+		Student result = newStudent.search(id);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(StaticPage.RESULTS.path);
         requestDispatcher.forward(request, response);
 	}
@@ -58,7 +58,7 @@ public class RegistrationController extends HttpServlet {
 				LocalDate.parse(request.getParameter("year-passed"))
 				);
 		StudentDAO newStudent = new StudentDAO();
-		newStudent.create(student);
+		Student result = newStudent.create(student);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(StaticPage.RESULTS.path);
         requestDispatcher.forward(request, response);
 	}
