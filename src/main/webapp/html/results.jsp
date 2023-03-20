@@ -16,32 +16,26 @@
 
 	<main class="container">
 
+        <div class="alert alert-success" role="alert">
+          ${message.toString()}
+        </div>
+
 		<h1>Results</h1>
-	
-		<table id="profile">
-
-			<tr>
-				<td>Username</td>
-				<td>${user.getUserame}</td>
-			</tr>
-			<tr>
-				<td>Full Name</td>
-				<td>${user.GirstName}</td>
-			</tr>
-			<tr>
-				<td>Email</td>
-				<td>${user.lastName}</td>
-			</tr>
-			<tr>
-				<td>Age</td>
-				<td>${user.age}</td>
-			</tr>
-			<tr>
-				<td>Qualification</td>
-				<td>${user.activity}</td>
-			</tr>
-
-		</table>
+	    <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            ${user.getFullName()}
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>ID: </b> ${user.getId()}</li>
+            <li class="list-group-item"><b>Username: </b> ${user.getUserName()}</li>
+            <li class="list-group-item"><b>Email: </b> ${user.getEmail()}</li>
+            <li class="list-group-item"><b>Address: </b> ${user.getAddress()}</li>
+            <li class="list-group-item"><b>Age: </b> ${user.getAge()}</li>
+            <li class="list-group-item"><b>Qualification: </b> ${user.getQualification()}</li>
+            <li class="list-group-item"><b>Percentage: </b> ${user.getPercentage()}</li>
+            <li class="list-group-item"><b>Year Passed: </b> ${user.getYearPassed()}</li>
+          </ul>
+        </div>
 		
 	</main>
 	<footer class="mt-auto text-white-50">
