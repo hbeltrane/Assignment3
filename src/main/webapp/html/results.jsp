@@ -43,10 +43,10 @@
 			<div class="container">
 				<div class="row">
 					<h5 class="col-6">
-						<a class="nav-link text-white" href="/registration">Registration</a>
+						<a class="nav-link text-white" href="Registration">Registration</a>
 					</h5>
 					<h5 class="col-6 col-lg-2 offset-lg-1 mb-3">
-						<a class="nav-link text-white" href="/search">Search</a>
+						<a class="nav-link text-white" href="Search">Search</a>
 					</h5>
 					</li>
 				</div>

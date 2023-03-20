@@ -19,7 +19,7 @@
 		<h1>Search Form</h1>
 		<!-- REGISTRATION FORM -->
 		<div class="card">
-		<form class="card-body" id="register" action="RegistrationController" method="POST">
+		<form class="card-body" id="register" action="Controller" method="GET">
 			<!-- STUDENT ID -->
 			<div class="row g-3 align-items-center">
 				<div class="col-auto">
@@ -51,10 +51,10 @@
 			<div class="container">
 				<div class="row">
 					<h5 class="col-6">
-						<a class="nav-link text-white" href="/registration">Registration</a>
+						<a class="nav-link text-white" href="Registration">Registration</a>
 					</h5>
 					<h5 class="col-6 col-lg-2 offset-lg-1 mb-3">
-						<a class="nav-link text-white" href="/search">Search</a>
+						<a class="nav-link text-white" href="Search">Search</a>
 					</h5>
 					</li>
 				</div>
