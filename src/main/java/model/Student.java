@@ -12,21 +12,11 @@ public class Student {
 	private int age;
 	private char qualification;
 	private double percentage;
-	private LocalDate yearPassed;
+	private LocalDate datePassed;
+	private int yearPassed;
 	public Student() {
-		super();
-		this.id = 0;
-		this.userName = null;
-		this.fullName = null;
-		this.password = null;
-		this.email = null;
-		this.address = null;
-		this.age = 0;
-		this.qualification = ' ';
-		this.percentage = 0;
-		this.yearPassed = null;
 	}
-	public Student(int id, String userName, String fullName, String password, String email, String address, int age, char qualification, double percentage, LocalDate yearPassed) {
+	public Student(int id, String userName, String fullName, String password, String email, String address, int age, char qualification, double percentage, LocalDate datePassed) {
 		super();
 		this.id = id;
 		this.userName = userName;
@@ -37,7 +27,8 @@ public class Student {
 		this.age = age;
 		this.qualification = qualification;
 		this.percentage = percentage;
-		this.yearPassed = yearPassed;
+		this.datePassed = datePassed;
+		this.yearPassed = datePassed.getYear();
 	}
 	public int getId() {
 		return id;
@@ -66,7 +57,10 @@ public class Student {
 	public double getPercentage() {
 		return percentage;
 	}
-	public LocalDate getYearPassed() {
+	public LocalDate getDatePassed() {
+		return datePassed;
+	}
+	public int getYearPassed() {
 		return yearPassed;
 	}
 }

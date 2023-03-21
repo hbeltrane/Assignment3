@@ -38,4 +38,18 @@ public class DatabaseConnection {
             System.out.println(e.getMessage());
         }
     }
+    public static void close(PreparedStatement statement){
+        try {
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    public static void close(ResultSet resultSet){
+        try {
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

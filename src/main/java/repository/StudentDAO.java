@@ -5,7 +5,6 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import model.Student;
 
@@ -25,7 +24,7 @@ public class StudentDAO {
 	        statement.setInt(7, student.getAge());
 	        statement.setString(8, Character.toString(student.getQualification()));
 	        statement.setDouble(9, student.getPercentage());
-			statement.setDate(10, Date.valueOf(student.getYearPassed()));
+			statement.setDate(10, Date.valueOf(student.getDatePassed()));
 			statement.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -36,26 +35,33 @@ public class StudentDAO {
 	}
 	public Student search(int id) {
 		Connection connection = DatabaseConnection.getConnection();
-		Student student = new Student();
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		Student student = null;
         try {
-	        PreparedStatement statement = connection.prepareStatement("SELECT * FROM students WHERE student_id = ? ");
+	        statement = connection.prepareStatement("SELECT * FROM students WHERE student_id = ? ");
 	        statement.setInt(1, id);
-	        ResultSet resultSet = statement.executeQuery();
-			student = new Student(
-					resultSet.getInt(1),
-	                resultSet.getString(2),
-	                resultSet.getString(3),
-	                resultSet.getString(4),
-	                resultSet.getString(5),
-	                resultSet.getString(6),
-					resultSet.getInt(7),
-	                resultSet.getString(8).charAt(0),
-					resultSet.getDouble(9),
-	                resultSet.getDate(10).toLocalDate()
-	                );
+	        resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				student = new Student(
+						resultSet.getInt(1),
+						resultSet.getString(2),
+						resultSet.getString(3),
+						resultSet.getString(4),
+						resultSet.getString(5),
+						resultSet.getString(6),
+						resultSet.getInt(7),
+						resultSet.getString(8).charAt(0),
+						resultSet.getDouble(9),
+						resultSet.getDate(10).toLocalDate()
+				);
+			}
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
+			DatabaseConnection.close(resultSet);
+			DatabaseConnection.close(statement);
             DatabaseConnection.close(connection);
         }
 		return student;
