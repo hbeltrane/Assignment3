@@ -56,7 +56,7 @@ public class Controller extends HttpServlet {
 				Integer.parseInt(request.getParameter("age")),
 				request.getParameter("qualification").charAt(0),
 				Double.parseDouble(request.getParameter("percentage")),
-				LocalDate.parse(request.getParameter("year-passed"))
+				LocalDate.parse(request.getParameter("date-passed"))
 				);
 		StudentDAO newStudent = new StudentDAO();
 		Student result = newStudent.create(student);

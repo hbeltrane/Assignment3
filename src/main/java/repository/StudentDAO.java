@@ -56,7 +56,6 @@ public class StudentDAO {
 						resultSet.getDate(10).toLocalDate()
 				);
 			}
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
