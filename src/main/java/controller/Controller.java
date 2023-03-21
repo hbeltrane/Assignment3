@@ -36,6 +36,7 @@ public class Controller extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("student-id"));
 		StudentDAO newStudent = new StudentDAO();
 		Student result = newStudent.search(id);
+		request.setAttribute("student-data", result);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(StaticPage.RESULTS.path);
         requestDispatcher.forward(request, response);
 	}

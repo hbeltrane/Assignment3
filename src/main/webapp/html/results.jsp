@@ -1,3 +1,4 @@
+<%@page import="model.Student"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,11 +13,13 @@
 	<script defer src="/js/script.js"></script>	
 	<title>Assignment 3 - Results</title>
 </head>
-
 <body>
-<%= "Welcome " + request.getParameter("student-id") %>  
+      <h1>Student Data</h1>
+        <%Student student = (Student)request.getAttribute("student-data");%>
+        <p><%=student.getUserName()%></p>
 </body>
 </html>
+
 
 
 <%-- 
