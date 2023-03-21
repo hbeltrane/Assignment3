@@ -12,6 +12,8 @@ public class PropertiesFileReader {
         this.databaseServer = databaseServer;
         ClassLoader classLoader = getClass().getClassLoader();
         try (InputStream input = classLoader.getResourceAsStream(path)) {
+    		System.out.println("path is " + path);
+    		System.out.println("input is " + input);
 
             prop = new Properties();
 

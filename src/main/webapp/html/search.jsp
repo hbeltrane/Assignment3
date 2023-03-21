@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
 		<h1>Search Form</h1>
 		<!-- REGISTRATION FORM -->
 		<div class="card">
-		<form class="card-body" id="register" action="Controller" method="GET">
+		<form class="card-body" id="search" action="Controller" method="GET">
 			<!-- STUDENT ID -->
 			<div class="row g-3 align-items-center">
 				<div class="col-auto">
@@ -39,7 +40,7 @@
 			<!-- SUBMIT -->
 			<div class="row align-items-cente">
 				<div class="col-auto">
-					<input class="btn btn-primary btn-lg" type="submit"	value="Register" />
+					<input class="btn btn-primary btn-lg" type="submit"	value="Search" />
 				</div>
 			</div>
 		</form>
