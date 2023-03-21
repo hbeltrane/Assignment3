@@ -1,13 +1,11 @@
 package controller;
 
 public enum StaticPage {
-    REGISTRATION("/html/registration.jsp"),
-    SEARCH("/html/search.jsp"),
-    RESULTS("/html/results.jsp");
+	REGISTRATION("/html/registration.jsp"), SEARCH("/html/search.jsp"), RESULTS("/html/results.jsp");
 
-    final String path;
+	final String path;
 
-    StaticPage(String path) {
-        this.path = path;
-    }
+	StaticPage(String path) {
+		this.path = path;
+	}
 }
