@@ -1,4 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%--
+ Lambton College
+ CSD 4464 - Programming Java EE
+ Assignment 3
+ Group 6
+ --%>
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +23,6 @@
 	integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
 	crossorigin="anonymous"></script>
 <link href="css/styles.css" rel="stylesheet" type="text/css">
-<script defer src="js/script.js"></script>
 <title>CSD 4464 - Programming Java EE - Assignment 3 - Group 6</title>
 </head>
 

@@ -52,7 +52,7 @@ CREATE TABLE `students` (
   `age` int NOT NULL,
   `qualification` char(1) NOT NULL,
   `percentage` float NOT NULL,
-  `year_passed` date NOT NULL,
+  `year_passed` int NOT NULL,
   PRIMARY KEY (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

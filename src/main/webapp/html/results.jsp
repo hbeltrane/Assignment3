@@ -1,4 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%--
+ Lambton College
+ CSD 4464 - Programming Java EE
+ Assignment 3
+ Group 6
+ --%>
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
